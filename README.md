@@ -1,4 +1,4 @@
-# FULL_ADDER_SUBTRACTOR
+FULL_ADDER_SUBTRACTOR
 
 Implementation-of-Full-Adder-and-Full-subtractor-circuit
 
@@ -37,19 +37,32 @@ Diff = A ⊕ B ⊕ Bin
 Borrow out = A'Bin + A'B + BBin
 
 **Truthtable**
+![WhatsApp Image 2024-12-05 at 19 08 17_59d01692](https://github.com/user-attachments/assets/cfe8bb73-d370-4582-add6-127b2f8e0002)
+
 
 **Procedure**
 
 Write the detailed procedure here
 
 **Program:**
+module fulladdsub(a,b,c,x,y,z,sum,dif,car,bor);
+input a,b,c,x,y,z;
+output sum,dif,car,bor;
+assign sum=a^b^c;
+assign car=a&b|a&c|b&c;
+assign dif=x^y^z;
+assign bor=~x&z|~x&y|y&z;
+endmodule
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by:P.KABILAN RegisterNumber:24900859
 */
 
 **RTL Schematic**
+![WhatsApp Image 2024-12-05 at 19 08 17_92068313](https://github.com/user-attachments/assets/8010cff6-c7aa-43e1-be2a-abd9420dcdf9)
+
 
 **Output Timing Waveform**
+![WhatsApp Image 2024-12-05 at 19 08 17_a1019cc6](https://github.com/user-attachments/assets/931e7bbe-e476-486b-b980-a6b523c26d7a)
 
 **Result:**
 
